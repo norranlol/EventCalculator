@@ -1,5 +1,5 @@
 package ru.date;
 
 public interface DateCalculator {
-	public DateDifference calculateDifferenceBetweenDates(DateStorer dateStorer);
+	public DateStorer calculateDifferenceBetweenDates(DateStorer dateStorer);
 }

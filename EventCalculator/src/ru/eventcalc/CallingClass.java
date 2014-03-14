@@ -31,7 +31,7 @@ public class CallingClass {
 			DateCalculator dateCalculator = new DateCalculatorImpl();
 			System.out.println(dateValidator.validateDatesOnAfter(dateStorer));
 			if (dateValidator.validateDatesOnAfter(dateStorer)){
-			DateDifference dateDifference = dateCalculator.calculateDifferenceBetweenDates(dateStorer);
+			DateDifference dateDifference = dateCalculator.calculateDifferenceBetweenDates(dateStorer).getDateDifference();
 			System.out.println("Years = " + dateDifference.getYears() + " ,Months = " + dateDifference.getMonths() + 
 					" ,Weeks = " + dateDifference.getWeeks() + " ,Days = " + dateDifference.getDays() + " ,Hours = " + 
 					dateDifference.getHours() + " ,Minutes = " + dateDifference.getMinutes());

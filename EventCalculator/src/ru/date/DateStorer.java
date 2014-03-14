@@ -6,6 +6,7 @@ public class DateStorer {
 	
 	private DateTime dateTimeCurrent;
 	private DateTime dateTimeFuture;
+	private DateDifference dateDifference;
 	
 	public DateStorer(DateTime dateTimeFuture){
 		dateTimeCurrent = new DateTime();
@@ -18,5 +19,13 @@ public class DateStorer {
 
 	public DateTime getDateTimeFuture() {
 		return dateTimeFuture;
+	}
+
+	public DateDifference getDateDifference() {
+		return dateDifference;
+	}
+
+	public void setDateDifference(DateDifference dateDifference) {
+		this.dateDifference = dateDifference;
 	}
 }

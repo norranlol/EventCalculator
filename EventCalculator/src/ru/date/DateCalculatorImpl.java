@@ -10,7 +10,7 @@ import org.joda.time.Years;
 
 public class DateCalculatorImpl implements DateCalculator {
 	
-	public DateDifference calculateDifferenceBetweenDates(DateStorer dateStorer){
+	public DateStorer calculateDifferenceBetweenDates(DateStorer dateStorer){
 		
 		DateTime dateTime = dateStorer.getDateTimeCurrent();
 		DateTime dateTimeFuture = dateStorer.getDateTimeFuture();
@@ -33,6 +33,7 @@ public class DateCalculatorImpl implements DateCalculator {
 		int minutes = Minutes.minutesBetween(dateTime.toLocalDateTime(), dateTimeFutureNoHours.toLocalDateTime()).getMinutes();
 		
 		DateDifference dateDifference = new DateDifference(years, months, weeks, days, hours, minutes);
-		return dateDifference;
+		dateStorer.setDateDifference(dateDifference);
+		return dateStorer;
 	}
 }
